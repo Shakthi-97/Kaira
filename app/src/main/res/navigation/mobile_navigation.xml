@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mobile_navigation"
+    app:startDestination="@id/book">
+
+    <fragment
+        android:id="@+id/nav_home_second"
+        android:name="com.example.rentride.nav_home_second"
+        android:label="fragment_nav_home_second"
+        tools:layout="@layout/fragment_nav_home_second" >
+        <action
+            android:id="@+id/action_nav_home_second_to_book"
+            app:destination="@id/book" />
+    </fragment>
+    <fragment
+        android:id="@+id/account"
+        android:name="com.example.rentride.account"
+        android:label="My Account"
+        tools:layout="@layout/fragment_account"/>
+
+    <fragment
+        android:id="@+id/bookings"
+        android:name="com.example.rentride.bookings"
+        android:label="My Bookings"
+        tools:layout="@layout/fragment_bookings" />
+    <fragment
+        android:id="@+id/notifications"
+        android:name="com.example.rentride.notifications"
+        android:label="Notifications (1)"
+        tools:layout="@layout/fragment_notifications" />
+    <fragment
+        android:id="@+id/trips"
+        android:name="com.example.rentride.trips"
+        android:label="Past Trips"
+        tools:layout="@layout/fragment_trips" />
+    <fragment
+        android:id="@+id/feedbacks"
+        android:name="com.example.rentride.feedbacks"
+        android:label="Feedbacks"
+        tools:layout="@layout/fragment_feedbacks" />
+    <fragment
+        android:id="@+id/logout"
+        android:name="com.example.rentride.logout"
+        android:label="Logout"
+        tools:layout="@layout/fragment_logout" />
+    <fragment
+        android:id="@+id/book"
+        android:name="com.example.rentride.book"
+        android:label="Book Now"
+        tools:layout="@layout/fragment_book" >
+        <action
+            android:id="@+id/action_book_to_nav_home_second"
+            app:destination="@id/nav_home_second" />
+    </fragment>
+</navigation>
