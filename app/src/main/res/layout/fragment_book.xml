@@ -3,18 +3,32 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:scrollbarSize="7dp"
+    android:scrollbarStyle="insideInset"
+    android:padding="10dp"
+    android:background="@drawable/wave"
     tools:context=".book">
 
+
     <!-- TODO: Update blank fragment layout -->
-    <ImageView
-        android:id="@+id/iv_user"
-        android:layout_width="400dp"
-        android:layout_height="200dp"
-        android:layout_alignParentTop="true"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="40dp"
-        android:layout_gravity="center"
-        android:foregroundGravity="center"
-        android:src="@drawable/logo" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#3fff"
+        android:orientation="vertical"
+        android:padding="10dp">
+
+        <Button
+            android:id="@+id/btnres"
+            android:layout_width="191dp"
+            android:layout_height="62dp"
+            android:layout_marginTop="450dp"
+            android:layout_marginLeft="80dp"
+            android:text="Reserve for Car" />
+
+    </LinearLayout>
+
 
 </FrameLayout>

@@ -1,0 +1,239 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MyBooking">
+
+
+    <RelativeLayout
+        android:id="@+id/header"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="#9C27B0"
+
+        android:gravity="center">
+
+        <TextView
+            android:id="@+id/txt1"
+            android:layout_width="350dp"
+            android:layout_height="45dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginBottom="5dp"
+            android:text="@string/My_Booking"
+            android:textAlignment="center"
+            android:textColor="#fff"
+            android:textSize="28sp"
+            app:drawableStartCompat="@drawable/arback"
+            android:gravity="center_horizontal" />
+
+    </RelativeLayout>
+
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="230dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginEnd="69dp"
+        android:layout_marginBottom="579dp"
+        android:text="@string/Pick_up_Details"
+        android:textColor="#20205C"
+        android:textSize="26sp"
+        android:textStyle="bold"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="69dp" />
+
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="230dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginEnd="68dp"
+        android:layout_marginBottom="321dp"
+        android:text="@string/Drop_off_Details"
+        android:textColor="#20205C"
+        android:textSize="26sp"
+        android:textStyle="bold"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="68dp" />
+
+    <EditText
+        android:id="@+id/Inputpickdate"
+        android:layout_width="320dp"
+        android:layout_height="40dp"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginEnd="38dp"
+        android:layout_marginBottom="440dp"
+        android:background="@drawable/text1"
+        android:ems="10"
+        android:paddingLeft="10dp"
+        android:inputType="date"
+        android:drawableStart="@drawable/ic_action_date2"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="38dp"
+        android:drawableLeft="@drawable/ic_action_date2" />
+
+    // android:text="@string/Pickup_Date_detail"
+
+
+    <EditText
+        android:id="@+id/Inputpicktime"
+        android:layout_width="320dp"
+        android:layout_height="40dp"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginEnd="38dp"
+        android:layout_marginBottom="378dp"
+        android:background="@drawable/text1"
+        android:ems="10"
+        android:paddingLeft="10dp"
+        android:inputType="time"
+        android:drawableStart="@drawable/ic_action_time"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="38dp"
+        android:drawableLeft="@drawable/ic_action_time" />
+
+    //android:text="@string/Pickup_Time_detail"
+
+
+    <EditText
+        android:id="@+id/Inputdropdate"
+        android:layout_width="320dp"
+        android:layout_height="40dp"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginEnd="33dp"
+        android:layout_marginBottom="185dp"
+        android:background="@drawable/text1"
+        android:ems="10"
+        android:paddingLeft="10dp"
+        android:inputType="date"
+        android:drawableStart="@drawable/ic_action_date2"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="33dp"
+        android:drawableLeft="@drawable/ic_action_date2" />
+
+    //android:text="@string/Dropoff_Date_detail"
+
+
+    <EditText
+        android:id="@+id/Inputdroptime"
+        android:layout_width="320dp"
+        android:layout_height="40dp"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginEnd="34dp"
+        android:layout_marginBottom="126dp"
+        android:background="@drawable/text1"
+        android:ems="10"
+        android:paddingLeft="10dp"
+        android:inputType="time"
+        android:drawableStart="@drawable/ic_action_time"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="34dp"
+        android:drawableLeft="@drawable/ic_action_time" />
+
+    //android:text="@string/Dropoff_Time_detail"
+
+    <Button
+        android:id="@+id/butCancel"
+        android:layout_width="109dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginEnd="209dp"
+        android:layout_marginRight="209dp"
+        android:layout_marginBottom="43dp"
+        android:background="@drawable/but"
+        android:drawableEnd="@drawable/delete"
+        android:drawableRight="@drawable/delete"
+        android:text="@string/Cancel"
+        android:textColor="#fff"
+        android:textSize="20sp"
+        android:textStyle="bold" />
+
+    <Button
+        android:id="@+id/button2"
+        android:layout_width="109dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginEnd="57dp"
+        android:layout_marginBottom="44dp"
+        android:background="@drawable/but"
+        android:drawableEnd="@drawable/next"
+        android:text="@string/Next"
+        android:textStyle="bold"
+        android:textColor="#fff"
+        android:textSize="20sp"
+        android:paddingRight="6dp"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="57dp"
+        android:drawableRight="@drawable/next" />
+
+    <EditText
+        android:id="@+id/Inputpick"
+        android:layout_width="320dp"
+        android:layout_height="40dp"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginEnd="39dp"
+        android:layout_marginBottom="508dp"
+       android:background="@drawable/text1"
+        android:ems="10"
+        android:paddingLeft="10dp"
+        android:inputType="textPostalAddress"
+        android:drawableStart="@drawable/ic_action_pickup"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="39dp"
+        android:drawableLeft="@drawable/ic_action_pickup" />
+
+    //android:text="@string/Pickup_Location_deatil"
+
+    <EditText
+        android:id="@+id/Inputdrop"
+        android:layout_width="320dp"
+        android:layout_height="40dp"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginEnd="33dp"
+        android:layout_marginBottom="248dp"
+        android:background="@drawable/text1"
+        android:ems="10"
+        android:paddingLeft="10dp"
+        android:inputType="textPostalAddress"
+        android:drawableStart="@drawable/ic_action_pickup"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="33dp"
+        android:drawableLeft="@drawable/ic_action_pickup" />
+
+    <Button
+        android:id="@+id/butUpdate"
+        android:layout_width="109dp"
+        android:layout_height="37dp"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginEnd="22dp"
+        android:layout_marginRight="22dp"
+        android:layout_marginBottom="623dp"
+        android:background="@drawable/but"
+
+        android:drawableEnd="@drawable/edit"
+        android:text="EDIT"
+        android:textColor="#fff"
+        android:paddingRight="5dp"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:drawableRight="@drawable/edit" />
+
+    //android:text="@string/Dropoff_Location_deatil"
+
+
+</RelativeLayout>

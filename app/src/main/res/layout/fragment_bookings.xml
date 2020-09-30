@@ -3,19 +3,126 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:scrollbarSize="7dp"
+    android:scrollbarStyle="insideInset"
+    android:padding="10dp"
     tools:context=".bookings">
 
     <!-- TODO: Update blank fragment layout -->
-    <ImageView
-        android:id="@+id/iv_user"
-        android:layout_width="400dp"
-        android:layout_height="200dp"
-        android:layout_alignParentTop="true"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="40dp"
-        android:layout_gravity="center"
-        android:foregroundGravity="center"
-        android:src="@drawable/logo" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:background="#fff">
+
+        <ImageView
+            android:id="@+id/imageView"
+            android:layout_width="400dp"
+            android:layout_height="200dp"
+            android:background="@drawable/lgo" />
+
+
+    <TextView
+        android:id="@+id/textView9"
+        android:layout_width="345dp"
+        android:layout_height="140dp"
+        android:background="@drawable/book"
+        android:text="@string/Trip1"
+        android:textColor="#545481"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:paddingTop="10dp"
+        android:paddingLeft="10dp"
+        android:layout_marginTop="10dp"/>
+
+        <TextView
+            android:id="@+id/textView8"
+            android:layout_width="61dp"
+            android:layout_height="49dp"
+            android:drawablePadding="2sp"
+            android:background="@drawable/car1"
+            android:layout_marginTop="-90dp"
+            android:layout_marginRight="130dp" />
+
+        <TextView
+            android:layout_width="100dp"
+            android:layout_height="30sp"
+            android:text="@string/Vehicle1"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:layout_marginRight="50dp"
+            android:layout_marginTop="-40dp"/>
+
+        <Button
+            android:id="@+id/tripbtn1"
+            android:layout_width="118dp"
+            android:layout_height="40dp"
+            android:background="@drawable/but"
+            android:drawableEnd="@drawable/next1"
+            android:text="@string/Details"
+            android:textColor="#fff"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:layout_marginLeft="100dp"
+            android:layout_marginTop="-40dp"
+            android:drawableRight="@drawable/next1" />
+
+    <TextView
+        android:id="@+id/textView11"
+        android:layout_width="345dp"
+        android:layout_height="140dp"
+        android:background="@drawable/book"
+        android:text="@string/Trip2"
+        android:textColor="#545481"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:paddingTop="10dp"
+        android:paddingLeft="10dp"
+        android:layout_marginTop="70dp" />
+
+        <TextView
+            android:id="@+id/textView12"
+            android:layout_width="61dp"
+            android:layout_height="49dp"
+            android:layout_marginTop="-90dp"
+            android:layout_marginRight="130dp"
+            android:background="@drawable/car1" />
+
+        <TextView
+            android:layout_width="150dp"
+            android:layout_height="40dp"
+            android:text="@string/Vehicle2"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:layout_marginRight="25dp"
+            android:layout_marginTop="-40dp"/>
+
+
+
+    <Button
+        android:id="@+id/tripbtn2"
+        android:layout_width="118dp"
+        android:layout_height="40dp"
+        android:background="@drawable/but"
+        android:drawableEnd="@drawable/next1"
+        android:text="@string/Details"
+        android:textColor="#fff"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        android:layout_marginLeft="100dp"
+        android:layout_marginTop="-40dp"
+        android:drawableRight="@drawable/next1" />
+
+
+
+
+
+
+
+    </LinearLayout>
 
 
 </FrameLayout>

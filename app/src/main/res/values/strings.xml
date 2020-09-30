@@ -12,4 +12,41 @@
     <string name="menu_slideshow">Slideshow</string>
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
+
+
+    <string name="book">"Book Now" </string>
+    <string name="Where_to">Where to?</string>
+    <string name="From">From</string>
+    <string name="Pick_up_Location">Pick-up Location</string>
+    <string name="Drop_off_Location">Drop-off Location</string>
+    <string name="Return_to_different_Location">Return to different Location?</string>
+    <string name="Time">Pick up Time</string>
+    <string name="Time1">Drop-off Time</string>
+    <string name="Pick_up_Date">Pick-up Date</string>
+    <string name="Drop_off_Date">Drop-off Date</string>
+    <string name="Search_for_Car">Search for Car</string>
+    <string name="days">No of days</string>
+    <string name="Due_to_Covid_19_some_destinations_maybe_unavailable_for_certain_dates">
+        Due to Covid-19,some destinations maybe unavailable for certain dates. </string>
+
+
+    <string name="My_Trips">My Bookings</string>
+    <string name="Trip1">24/09/2020, 11:30AM</string>
+    <string name="Trip2">05/10/2020, 08:00AM</string>
+    <string name="Vehicle1">Bajaj RE 205</string>
+    <string name="Vehicle2">Honda Freed</string>
+    <string name="Details">Details</string>
+
+    <string name="My_Booking">My Booking</string>
+    <string name="Pick_up_Details">Pick-up Details</string>
+    <string name="Drop_off_Details">Drop-off Details</string>
+    <string name="Cancel">Cancel</string>
+    <string name="Next">Next</string>
+    <string name="Pickup_Location_deatil">NO 24, Galle Road</string>
+    <string name="Pickup_Date_detail">24/09/2020</string>
+    <string name="Pickup_Time_detail">11:30:AM</string>
+    <string name="Dropoff_Location_deatil">NO 43/1, Nuwara Eliya</string>
+    <string name="Dropoff_Date_detail">25/09/2020</string>
+    <string name="Dropoff_Time_detail">03:30:PM</string>
+    <string name="title_activity_maps">Map</string>
 </resources>
