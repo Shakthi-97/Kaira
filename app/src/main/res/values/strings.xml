@@ -42,11 +42,6 @@
     <string name="Drop_off_Details">Drop-off Details</string>
     <string name="Cancel">Cancel</string>
     <string name="Next">Next</string>
-    <string name="Pickup_Location_deatil">NO 24, Galle Road</string>
-    <string name="Pickup_Date_detail">24/09/2020</string>
-    <string name="Pickup_Time_detail">11:30:AM</string>
-    <string name="Dropoff_Location_deatil">NO 43/1, Nuwara Eliya</string>
-    <string name="Dropoff_Date_detail">25/09/2020</string>
-    <string name="Dropoff_Time_detail">03:30:PM</string>
+    <string name="save">SAVE</string>
     <string name="title_activity_maps">Map</string>
 </resources>

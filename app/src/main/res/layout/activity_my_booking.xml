@@ -58,8 +58,8 @@
         android:textColor="#20205C"
         android:textSize="26sp"
         android:textStyle="bold"
-        android:layout_alignParentRight="true"
-        android:layout_marginRight="68dp" />
+        android:layout_marginRight="68dp"
+        android:layout_alignParentRight="true" />
 
     <EditText
         android:id="@+id/Inputpickdate"
@@ -77,8 +77,6 @@
         android:layout_alignParentRight="true"
         android:layout_marginRight="38dp"
         android:drawableLeft="@drawable/ic_action_date2" />
-
-    // android:text="@string/Pickup_Date_detail"
 
 
     <EditText
@@ -98,8 +96,6 @@
         android:layout_marginRight="38dp"
         android:drawableLeft="@drawable/ic_action_time" />
 
-    //android:text="@string/Pickup_Time_detail"
-
 
     <EditText
         android:id="@+id/Inputdropdate"
@@ -118,7 +114,6 @@
         android:layout_marginRight="33dp"
         android:drawableLeft="@drawable/ic_action_date2" />
 
-    //android:text="@string/Dropoff_Date_detail"
 
 
     <EditText
@@ -138,29 +133,29 @@
         android:layout_marginRight="34dp"
         android:drawableLeft="@drawable/ic_action_time" />
 
-    //android:text="@string/Dropoff_Time_detail"
 
     <Button
         android:id="@+id/butCancel"
-        android:layout_width="109dp"
+        android:layout_width="130dp"
         android:layout_height="wrap_content"
         android:layout_alignParentEnd="true"
-        android:layout_alignParentRight="true"
         android:layout_alignParentBottom="true"
         android:layout_marginEnd="209dp"
-        android:layout_marginRight="209dp"
         android:layout_marginBottom="43dp"
         android:background="@drawable/but"
         android:drawableEnd="@drawable/delete"
-        android:drawableRight="@drawable/delete"
         android:text="@string/Cancel"
+        android:textStyle="bold"
         android:textColor="#fff"
         android:textSize="20sp"
-        android:textStyle="bold" />
+        android:paddingRight="5dp"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="209dp"
+        android:drawableRight="@drawable/delete" />
 
     <Button
         android:id="@+id/button2"
-        android:layout_width="109dp"
+        android:layout_width="130dp"
         android:layout_height="wrap_content"
         android:layout_alignParentEnd="true"
         android:layout_alignParentBottom="true"
@@ -172,7 +167,7 @@
         android:textStyle="bold"
         android:textColor="#fff"
         android:textSize="20sp"
-        android:paddingRight="6dp"
+        android:paddingRight="5dp"
         android:layout_alignParentRight="true"
         android:layout_marginRight="57dp"
         android:drawableRight="@drawable/next" />
@@ -185,7 +180,7 @@
         android:layout_alignParentBottom="true"
         android:layout_marginEnd="39dp"
         android:layout_marginBottom="508dp"
-       android:background="@drawable/text1"
+        android:background="@drawable/text1"
         android:ems="10"
         android:paddingLeft="10dp"
         android:inputType="textPostalAddress"
@@ -194,7 +189,6 @@
         android:layout_marginRight="39dp"
         android:drawableLeft="@drawable/ic_action_pickup" />
 
-    //android:text="@string/Pickup_Location_deatil"
 
     <EditText
         android:id="@+id/Inputdrop"
@@ -215,23 +209,22 @@
 
     <Button
         android:id="@+id/butUpdate"
-        android:layout_width="109dp"
+        android:layout_width="126dp"
         android:layout_height="37dp"
         android:layout_alignParentEnd="true"
         android:layout_alignParentRight="true"
         android:layout_alignParentBottom="true"
-        android:layout_marginEnd="22dp"
-        android:layout_marginRight="22dp"
-        android:layout_marginBottom="623dp"
+        android:layout_marginEnd="52dp"
+        android:layout_marginRight="52dp"
+        android:layout_marginBottom="622dp"
         android:background="@drawable/but"
-
         android:drawableEnd="@drawable/edit"
-        android:text="EDIT"
+        android:drawableRight="@drawable/edit"
+        android:text="@string/save"
+        android:paddingRight="10dp"
         android:textColor="#fff"
-        android:paddingRight="5dp"
         android:textSize="20sp"
-        android:textStyle="bold"
-        android:drawableRight="@drawable/edit" />
+        android:textStyle="bold" />
 
     //android:text="@string/Dropoff_Location_deatil"
 
