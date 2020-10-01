@@ -26,7 +26,7 @@ import java.util.Calendar;
 public class MyBooking extends AppCompatActivity {
 
     EditText txtpick,txtdrop,txtpickdate,txtpicktime,txtdropdate,txtdroptime;
-    Button butCancel,ResUpdate;
+    Button butCancel,butUpdate;
     Reservation reserve1;
     DatabaseReference dbRef;
     int mYear,mMonth,mDay, mHour,mMinute;
@@ -68,9 +68,9 @@ public class MyBooking extends AppCompatActivity {
         });
 
 
-        ResUpdate = findViewById(R.id.butUpdate);
+        butUpdate = findViewById(R.id.Update);
 
-        ResUpdate.setOnClickListener(new View.OnClickListener() {
+        butUpdate.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
 
@@ -90,35 +90,41 @@ public class MyBooking extends AppCompatActivity {
             }
         });
 
-//
-//        butCancel.setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View view) {
-//
-//                DatabaseReference delRef = FirebaseDatabase.getInstance().getReference().child("Reservation");
-//                delRef.addListenerForSingleValueEvent(new ValueEventListener() {
-//                    @Override
-//                    public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
-//                        if (dataSnapshot.hasChild("Res1")) {
-//                            dbRef = FirebaseDatabase.getInstance().getReference().child("Reservation").child("Res1");
-//                            dbRef.removeValue();
-//                            clearControls();
-//                            Toast.makeText(getApplicationContext(),"Data Deleted Successfully",Toast.LENGTH_SHORT).show();
-//
-//                        }
-//                        else
-//                            Toast.makeText(getApplicationContext(),"No Source to Delete",Toast.LENGTH_SHORT).show();
-//                    }
-//
-//                    @Override
-//                    public void onCancelled(@NonNull DatabaseError databaseError) {
-//
-//                    }
-//                });
-//
-//            }
-//        });
-//
+
+
+
+
+
+        butCancel = findViewById(R.id.Cancel);
+
+        butCancel.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+
+                DatabaseReference delRef = FirebaseDatabase.getInstance().getReference().child("Reservation");
+                delRef.addListenerForSingleValueEvent(new ValueEventListener() {
+                    @Override
+                    public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
+                        if (dataSnapshot.hasChild("Res1")) {
+                            dbRef = FirebaseDatabase.getInstance().getReference().child("Reservation").child("Res1");
+                            dbRef.removeValue();
+                            clearControls();
+                            Toast.makeText(getApplicationContext(),"Details Deleted Successfully",Toast.LENGTH_SHORT).show();
+
+                        }
+                        else
+                            Toast.makeText(getApplicationContext(),"No Details to Delete",Toast.LENGTH_SHORT).show();
+                    }
+
+                    @Override
+                    public void onCancelled(@NonNull DatabaseError databaseError) {
+
+                    }
+                });
+
+            }
+        });
+
 
 
         txtpickdate.setOnClickListener(new View.OnClickListener() {

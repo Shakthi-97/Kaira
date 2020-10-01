@@ -44,4 +44,10 @@
     <string name="Next">Next</string>
     <string name="save">SAVE</string>
     <string name="title_activity_maps">Map</string>
+    <string name="content">"We are the best way to move for people who don't have their own Car"</string>
+    <string name="loc">Tap here to find your current location</string>
+    <string name="car">Reserve your Car</string>
+    <string name="des">Rent fast and travel Smart !</string>
+
+
 </resources>

@@ -20,16 +20,18 @@ import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 
 import java.util.Calendar;
+import java.util.Date;
 
 public class Reserve extends AppCompatActivity {
 
     EditText txtpick,txtdrop,txtpickdate,txtpicktime,txtdropdate,txtdroptime;
-    int mYear,mMonth,mDay, mHour,mMinute, mStartYear, mStartMonth, mStartDay,mEndYear, mEndMonth, mEndDay,daysDifference;
-    Button btn;
+    int mYear,mMonth,mDay, mHour,mMinute, mStartYear, mStartMonth, mStartDay,mEndYear, mEndMonth, mEndDay;
+    Button btn,btnday;
     DatabaseReference dbRef;
     Reservation reserve1;
-    private TextView result;
-    protected Button btnday;
+    TextView result;
+    Date startDate,date2;
+
 
 
 
@@ -53,24 +55,15 @@ public class Reserve extends AppCompatActivity {
         final Calendar calendar=Calendar.getInstance();
 
 
-//        btnday.setOnClickListener(new View.OnClickListener() {
-//
-//            @Override
-//            public void onClick(View v) {
-//
-//                Calendar startDate = Calendar.getInstance();
-//                startDate.set(mStartYear, mStartMonth, mStartDay);
-//                long startDateMillis = startDate.getTimeInMillis();
-//
-//                Calendar endDate = Calendar.getInstance();
-//                endDate.set(mEndYear, mEndMonth, mEndDay);
-//                long endDateMillis = endDate.getTimeInMillis();
-//
-//                long differenceMillis = endDateMillis - startDateMillis;
-//                int daysDifference = (int) (differenceMillis / (1000 * 60 * 60 * 24));
-//
-//            }
-//        });
+        btnday.setOnClickListener(new View.OnClickListener() {
+
+            @Override
+            public void onClick(View v) {
+
+
+
+            }
+        });
 
 
         txtpickdate.setOnClickListener(new View.OnClickListener() {
@@ -211,7 +204,7 @@ public class Reserve extends AppCompatActivity {
                         reserve1.setReturndate(txtdropdate.getText().toString().trim());
                         reserve1.setReturntime(txtdroptime.getText().toString().trim());
 
-                        dbRef.push().setValue(reserve1);
+                       // dbRef.push().setValue(reserve1);
                         dbRef.child("Res1").setValue(reserve1);
                         Toast.makeText(getApplicationContext(), "Data Svaed Successfully", Toast.LENGTH_SHORT).show();
                         clearControls();

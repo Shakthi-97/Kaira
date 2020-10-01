@@ -85,6 +85,18 @@ public class book extends Fragment {
             }
         });
 
+        btn = view.findViewById(R.id.butlocation);
+        btn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(getActivity(),MapsActivity.class);
+                startActivity(intent);
+            }
+        });
+
+
+
+
         return view;
 
     }

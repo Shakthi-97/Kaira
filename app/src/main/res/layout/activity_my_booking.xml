@@ -135,7 +135,7 @@
 
 
     <Button
-        android:id="@+id/butCancel"
+        android:id="@+id/Cancel"
         android:layout_width="130dp"
         android:layout_height="wrap_content"
         android:layout_alignParentEnd="true"
@@ -208,7 +208,7 @@
         android:drawableLeft="@drawable/ic_action_pickup" />
 
     <Button
-        android:id="@+id/butUpdate"
+        android:id="@+id/Update"
         android:layout_width="126dp"
         android:layout_height="37dp"
         android:layout_alignParentEnd="true"
