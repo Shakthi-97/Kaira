@@ -48,6 +48,12 @@
     <string name="loc">Tap here to find your current location</string>
     <string name="car">Reserve your Car</string>
     <string name="des">Rent fast and travel Smart !</string>
+    <string name="invalid_name">Please Enter your Name</string>
+    <string name="invalid_email">Enter Valid Email</string>
+    <string name="invalid_mobile">Enter Valid Number</string>
+    <string name="invalid_password">Enter 6 digit password</string>
+
+    <string name="app">Rent Ride</string>
 
 
 </resources>
