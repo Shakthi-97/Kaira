@@ -7,23 +7,7 @@
     android:layout_height="match_parent"
     tools:context=".Register">
 
-    <RelativeLayout
-        android:id="@+id/header"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:background="#545481"
-        android:gravity="center">
 
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="5dp"
-            android:layout_marginBottom="5dp"
-            android:text="@string/app"
-            android:textColor="#fff"
-            android:textSize="22sp"
-            android:textStyle="bold|italic" />
-    </RelativeLayout>
 
     <ImageView
         android:id="@+id/iv_user"
@@ -31,7 +15,7 @@
         android:layout_height="200dp"
         android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="40dp"
+        android:layout_marginTop="20dp"
         app:srcCompat="@drawable/logo" />
 
     <EditText
@@ -40,7 +24,7 @@
         android:layout_height="wrap_content"
         android:layout_below="@+id/iv_user"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="30dp"
+        android:layout_marginTop="25dp"
         android:drawableLeft="@drawable/ic_baseline_person_24"
         android:drawablePadding="8dp"
         android:ems="10"
@@ -58,7 +42,7 @@
         android:layout_height="wrap_content"
         android:layout_below="@+id/iv_user"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="90dp"
+        android:layout_marginTop="80dp"
         android:textColor="#000"
         android:ems="10"
         android:inputType="textEmailAddress" />
@@ -89,7 +73,7 @@
         android:layout_alignLeft="@id/Cus_email"
         android:layout_alignStart="@+id/Cus_email"
         android:layout_below="@+id/Cus_email"
-        android:layout_marginTop="80dp"
+        android:layout_marginTop="70dp"
         android:textColor="#000"
         android:inputType="textPassword"
         android:layout_centerHorizontal="true"
@@ -101,10 +85,10 @@
         android:layout_height="wrap_content"
         android:layout_below="@+id/Cus_Password"
         android:layout_marginLeft="110dp"
-        android:layout_marginTop="31dp"
+        android:layout_marginTop="28dp"
         android:background="#545481"
         android:hint="Register Now"
-        android:textColor="#fff" />
+        android:textColor="#000" />
 
 
 </RelativeLayout>
