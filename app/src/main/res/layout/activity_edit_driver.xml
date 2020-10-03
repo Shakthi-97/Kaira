@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:scrollbarSize="7dp"
+    android:scrollbarStyle="insideInset"
+    android:orientation="vertical"
+    android:padding="10dp"
+    android:gravity="center"
+    android:background="#fff"
+    tools:context=".EditDriver">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Driver \nDetails"
+        android:background="@drawable/editcircle"
+        android:gravity="center"
+        android:textStyle="bold"
+        android:textSize="20dp"
+        android:textColor="#20639B"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:text="First Name:"
+        android:layout_marginRight="110dp"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        android:textColor="#20639B"/>
+
+    <EditText
+        android:id="@+id/firstName"
+        android:layout_width="320dp"
+        android:layout_height="40dp"
+        android:inputType="textPersonName"
+        android:paddingLeft="15dp"
+        android:layout_marginTop="5dp"
+        android:background="@drawable/text"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:text="Last Name:"
+        android:layout_marginRight="110dp"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        android:textColor="#20639B"/>
+
+    <EditText
+        android:id="@+id/lastName"
+        android:layout_width="320dp"
+        android:layout_height="40dp"
+        android:inputType="textPersonName"
+        android:paddingLeft="15dp"
+        android:layout_marginTop="5dp"
+        android:background="@drawable/text"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:text="@string/email"
+        android:layout_marginRight="130dp"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        android:textColor="#20639B"/>
+
+    <EditText
+        android:id="@+id/email"
+        android:layout_width="320dp"
+        android:layout_height="40dp"
+        android:inputType="textPersonName"
+        android:paddingLeft="15dp"
+        android:layout_marginTop="5dp"
+        android:background="@drawable/text"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:text="@string/phoneNum"
+        android:layout_marginRight="100dp"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        android:textColor="#20639B"/>
+
+    <EditText
+        android:id="@+id/phone"
+        android:layout_width="320dp"
+        android:layout_height="40dp"
+        android:inputType="number"
+        android:paddingLeft="15dp"
+        android:layout_marginTop="5dp"
+        android:background="@drawable/text"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:text="License Number:"
+        android:layout_marginRight="93dp"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        android:textColor="#20639B"/>
+
+    <EditText
+        android:id="@+id/licenseNum"
+        android:layout_width="320dp"
+        android:layout_height="40dp"
+        android:inputType="textPersonName"
+        android:paddingLeft="15dp"
+        android:layout_marginTop="5dp"
+        android:background="@drawable/text"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:text="@string/country"
+        android:layout_marginRight="95dp"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        android:textColor="#20639B"/>
+
+    <EditText
+        android:id="@+id/country"
+        android:layout_width="320dp"
+        android:layout_height="40dp"
+        android:inputType="textPersonName"
+        android:paddingLeft="10dp"
+        android:layout_marginTop="5dp"
+        android:background="@drawable/text"/>
+
+    <Button
+        android:id="@+id/driverSave"
+        android:layout_width="100dp"
+        android:layout_height="40dp"
+        android:text="save"
+        android:textAllCaps="true"
+        android:layout_marginTop="15dp"
+        android:layout_marginRight="70dp"
+        android:background="@drawable/btn"
+        android:textColor="#FFFBF8"/>
+
+    <Button
+        android:id="@+id/next"
+        android:layout_width="100dp"
+        android:layout_height="40dp"
+        android:text="next"
+        android:textAllCaps="true"
+        android:layout_marginLeft="70dp"
+        android:layout_marginTop="-40dp"
+        android:background="@drawable/btn"
+        android:textColor="#FFFBF8"/>
+
+</LinearLayout>

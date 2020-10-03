@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:scrollbarSize="7dp"
+    android:scrollbarStyle="insideInset"
+    android:orientation="vertical"
+    android:background="@drawable/light"
+    android:padding="10dp"
+    tools:context=".CreateDriver">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:padding="10dp"
+        android:gravity="center"
+        android:background="#3fff">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Driver \nDetails"
+            android:background="@drawable/circle"
+            android:gravity="center"
+            android:textStyle="bold"
+            android:textSize="20dp"
+            android:textColor="#FFFBF8"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/msg1"
+            android:layout_marginTop="15dp"
+            android:textColor="#FFFBF8"/>
+
+        <EditText
+            android:id="@+id/firstName"
+            android:layout_width="280dp"
+            android:layout_height="40dp"
+            android:hint="First Name *"
+            android:textColorHint="#949491"
+            android:inputType="textPersonName"
+            android:paddingLeft="15dp"
+            android:layout_marginTop="15dp"
+            android:background="@drawable/lbtn"/>
+
+        <EditText
+            android:id="@+id/lastName"
+            android:layout_width="280dp"
+            android:layout_height="40dp"
+            android:hint="Last Name *"
+            android:textColorHint="#949491"
+            android:inputType="textPersonName"
+            android:paddingLeft="15dp"
+            android:layout_marginTop="15dp"
+            android:background="@drawable/lbtn"/>
+
+        <EditText
+            android:id="@+id/email"
+            android:layout_width="280dp"
+            android:layout_height="40dp"
+            android:hint="Email *"
+            android:inputType="textEmailAddress"
+            android:paddingLeft="15dp"
+            android:textColorHint="#949491"
+            android:layout_marginTop="15dp"
+            android:background="@drawable/lbtn"/>
+
+        <EditText
+            android:id="@+id/phone"
+            android:layout_width="280dp"
+            android:layout_height="40dp"
+            android:hint="Phone *"
+            android:inputType="phone"
+            android:textColorHint="#949491"
+            android:paddingLeft="15dp"
+            android:layout_marginTop="15dp"
+            android:background="@drawable/lbtn"/>
+
+        <EditText
+            android:id="@+id/licenseNum"
+            android:layout_width="280dp"
+            android:layout_height="40dp"
+            android:hint="License number *"
+            android:inputType="text"
+            android:paddingLeft="15dp"
+            android:textColorHint="#949491"
+            android:layout_marginTop="15dp"
+            android:background="@drawable/lbtn"/>
+
+        <EditText
+            android:id="@+id/country"
+            android:layout_width="280dp"
+            android:layout_height="40dp"
+            android:hint="Country/Region *"
+            android:textColorHint="#949491"
+            android:inputType="text"
+            android:paddingLeft="15dp"
+            android:layout_marginTop="15dp"
+            android:background="@drawable/lbtn"/>
+
+        <Button
+            android:id="@+id/driverBook"
+            android:layout_width="280dp"
+            android:layout_height="40dp"
+            android:text="Book"
+            android:textAllCaps="true"
+            android:layout_marginTop="15dp"
+            android:background="@drawable/btncolor"
+            android:textColor="#FFFBF8"/>
+
+    </LinearLayout>
+
+</LinearLayout>

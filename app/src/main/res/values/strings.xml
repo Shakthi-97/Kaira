@@ -13,6 +13,13 @@
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
 
+    <string name="msg1">Please enter the lead driver details.</string>
+    <string name="email">Email:</string>
+    <string name="phoneNum">Phone Number:</string>
+    <string name="dob">Date of Birth:</string>
+    <string name="country">Country/Region:</string>
+    <string name="trips">Rides</string>
+    <string name="complete">Trip Completed</string>
 
     <string name="book">"Book Now" </string>
     <string name="Where_to">Where to?</string>
@@ -48,6 +55,12 @@
     <string name="loc">Tap here to find your current location</string>
     <string name="car">Reserve Car</string>
     <string name="des">Rent fast and travel Smart !</string>
+    <string name="invalid_name">Please Enter your Name</string>
+    <string name="invalid_email">Enter Valid Email</string>
+    <string name="invalid_mobile">Enter Valid Number</string>
+    <string name="invalid_password">Enter 6 digit password</string>
+
+    <string name="app">Rent Ride</string>
 
     <string name="here">Here you go!!!</string>
     <string name="Username">Username</string>
