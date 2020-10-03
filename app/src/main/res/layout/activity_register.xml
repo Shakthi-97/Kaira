@@ -86,7 +86,7 @@
         android:layout_below="@+id/Cus_Password"
         android:layout_marginLeft="110dp"
         android:layout_marginTop="28dp"
-        android:background="#545481"
+        android:background="#9C27B0"
         android:hint="Register Now"
         android:textColor="#000" />
 
