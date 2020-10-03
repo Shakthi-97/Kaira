@@ -56,11 +56,12 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
                     try {
                         List<Address> addressList = geocoder.getFromLocation(latitude, longitude, 1);
 
-                        String str = addressList.get(0).getLocality() + " , ";
-                        str += addressList.get(0).getCountryName();
+                        String str = addressList.get(0).getAddressLine(0);
+//                        str += addressList.get(0).getLocality() + " , ";
+//                        str += addressList.get(0).getCountryName();
 
                         mMap.addMarker(new MarkerOptions().position(latLng).title(str));
-                        mMap.moveCamera(CameraUpdateFactory.newLatLngZoom(latLng, 10.2f));
+                        mMap.moveCamera(CameraUpdateFactory.newLatLngZoom(latLng, 16.0f));
 
                     } catch (IOException e) {
                         e.printStackTrace();
@@ -86,7 +87,7 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
                         str += addressList.get(0).getCountryName();
 
                         mMap.addMarker(new MarkerOptions().position(latLng).title(str));
-                        mMap.moveCamera(CameraUpdateFactory.newLatLngZoom(latLng, 10.2f));
+                        mMap.moveCamera(CameraUpdateFactory.newLatLngZoom(latLng, 16.0f));
 
                     } catch (IOException e) {
                         e.printStackTrace();

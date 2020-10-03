@@ -5,6 +5,8 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.app.DatePickerDialog;
 import android.app.TimePickerDialog;
 import android.content.Intent;
+import android.graphics.Color;
+import android.graphics.drawable.ColorDrawable;
 import android.os.Bundle;
 import android.text.TextUtils;
 import android.text.format.DateFormat;
@@ -19,19 +21,23 @@ import android.widget.Toast;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 
+import org.joda.time.Period;
+import org.joda.time.PeriodType;
+
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
 import java.util.Calendar;
 import java.util.Date;
 
 public class Reserve extends AppCompatActivity {
 
-    EditText txtpick,txtdrop,txtpickdate,txtpicktime,txtdropdate,txtdroptime;
+    EditText txtpick,txtdrop,txtpicktime,txtdroptime;
     int mYear,mMonth,mDay, mHour,mMinute, mStartYear, mStartMonth, mStartDay,mEndYear, mEndMonth, mEndDay;
-    Button btn,btnday;
+    Button txtpickdate,txtdropdate,btn,calculate;
     DatabaseReference dbRef;
     Reservation reserve1;
     TextView result;
-    Date startDate,date2;
-
+    DatePickerDialog.OnDateSetListener dateSetListener1,dateSetListener2;
 
 
 
@@ -42,54 +48,120 @@ public class Reserve extends AppCompatActivity {
 
         txtpick = findViewById(R.id.Inputpick);
         txtdrop = findViewById(R.id.Inputdrop);
-        txtpickdate = findViewById(R.id.Inputpickdate);
+        txtpickdate = findViewById(R.id.txtpickdate);
         txtpicktime = findViewById(R.id.Inputpicktime);
-        txtdropdate = findViewById(R.id.Inputdropdate);
+        txtdropdate = findViewById(R.id.txtdropdate);
         txtdroptime = findViewById(R.id.Inputdroptime);
-        btnday = (Button) findViewById(R.id.btndays);
-
+        calculate = (Button) findViewById(R.id.calculate);
         btn = findViewById(R.id.btnok);
+        result = findViewById(R.id.result);
         reserve1 = new Reservation();
 
-        txtpickdate = findViewById(R.id.Inputpickdate);
-        final Calendar calendar=Calendar.getInstance();
+        Calendar calendar = Calendar.getInstance();
+        final int year = calendar.get(Calendar.YEAR);
+        final int month = calendar.get(Calendar.MONTH);
+        final int day = calendar.get(Calendar.DAY_OF_MONTH);
 
 
-        btnday.setOnClickListener(new View.OnClickListener() {
-
-            @Override
-            public void onClick(View v) {
-
-
-
-            }
-        });
+        final SimpleDateFormat simpleDateFormat = new SimpleDateFormat("dd/MM/yyyy");
+        String date = simpleDateFormat.format(Calendar.getInstance().getTime());
+        txtdropdate.setText(date);
 
 
         txtpickdate.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-
-                final Calendar calendar = Calendar.getInstance();
-                mYear= calendar.get(calendar.YEAR);
-                mMonth= calendar.get(calendar.MONTH);
-                mDay= calendar.get(calendar.DAY_OF_MONTH);
-
-                DatePickerDialog datePickerDialog= new DatePickerDialog(Reserve.this, new DatePickerDialog.OnDateSetListener() {
-                    @Override
-                    public void onDateSet(DatePicker datePicker, int i, int i1, int i2) {
-
-                        txtpickdate.setText(i+"/"+i1+"/"+i2);
-                    }
-                },mYear,mMonth,mDay);
+                DatePickerDialog datePickerDialog = new DatePickerDialog(
+                        Reserve.this,
+                        android.R.style.Theme_Holo_Light_Dialog_MinWidth,
+                        dateSetListener1,year,month,day
+                );
+                datePickerDialog.getWindow().setBackgroundDrawable(new
+                        ColorDrawable(Color.TRANSPARENT));
                 datePickerDialog.show();
 
             }
         });
 
+        dateSetListener1 = new DatePickerDialog.OnDateSetListener() {
+            @Override
+            public void onDateSet(DatePicker datePicker, int year, int month, int day) {
+                month = month +1;
+                String date = day + "/" + month + "/" + year;
+                txtpickdate.setText(date);
+            }
+        };
+
+//
+
+
+        txtdropdate.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                DatePickerDialog datePickerDialog = new DatePickerDialog(
+                        Reserve.this,
+                        android.R.style.Theme_Holo_Light_Dialog_MinWidth,
+                        dateSetListener2,year,month,day
+                );
+                datePickerDialog.getWindow().setBackgroundDrawable(new
+                        ColorDrawable(Color.TRANSPARENT));
+                datePickerDialog.show();
+
+            }
+        });
+
+        dateSetListener2 = new DatePickerDialog.OnDateSetListener() {
+            @Override
+            public void onDateSet(DatePicker datePicker, int year, int month, int day) {
+                month = month +1;
+                String date = day + "/" + month + "/" + year;
+                txtdropdate.setText(date);
+            }
+        };
+
+
+        calculate.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+
+                String sDate = txtpickdate.getText().toString();
+                String eDate = txtdropdate.getText().toString();
+                SimpleDateFormat simpleDateFormat1 = new SimpleDateFormat("dd/MM/yyyy");
+
+                try{
+                    Date date1 = simpleDateFormat1.parse(sDate);
+                    Date date2 = simpleDateFormat.parse(eDate);
+
+                    long startDate = date1.getTime();
+                    long endDate = date2.getTime();
+
+                    if (startDate <= endDate) {
+                        Period period = new Period(startDate, endDate, PeriodType.yearMonthDay());
+                        int years = period.getYears();
+                        int months = period.getMonths();
+                        int days = period.getDays();
+
+                        result.setText(days + " Day");
+                    } else {
+                        Toast.makeText(getApplicationContext(),"Not a valid date",Toast.LENGTH_SHORT).show();
+
+
+                    }
+
+                } catch (ParseException e) {
+                    e.printStackTrace();
+                }
+
+            }
+        });
+
+
+
+
         txtpicktime.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+
                 // initialize time picker dialog
                 TimePickerDialog timePickerDialog = new TimePickerDialog(
                         Reserve.this,
@@ -119,26 +191,6 @@ public class Reserve extends AppCompatActivity {
             }
         });
 
-        txtdropdate.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-
-                final Calendar calendar = Calendar.getInstance();
-                mYear= calendar.get(calendar.YEAR);
-                mMonth= calendar.get(calendar.MONTH);
-                mDay= calendar.get(calendar.DAY_OF_MONTH);
-
-                DatePickerDialog datePickerDialog= new DatePickerDialog(Reserve.this, new DatePickerDialog.OnDateSetListener() {
-                    @Override
-                    public void onDateSet(DatePicker datePicker, int i, int i1, int i2) {
-
-                        txtdropdate.setText(i+"/"+i1+"/"+i2);
-                    }
-                },mYear,mMonth,mDay);
-                datePickerDialog.show();
-
-            }
-        });
 
         txtdroptime.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -209,7 +261,7 @@ public class Reserve extends AppCompatActivity {
                         Toast.makeText(getApplicationContext(), "Data Svaed Successfully", Toast.LENGTH_SHORT).show();
                         clearControls();
 
-                        Intent intent = new Intent(Reserve.this, Car.class);
+                        Intent intent = new Intent(Reserve.this, Login.class);
                         startActivity(intent);
                     }
 
@@ -226,7 +278,6 @@ public class Reserve extends AppCompatActivity {
 
 
     }
-
 
 
     private void clearControls() {

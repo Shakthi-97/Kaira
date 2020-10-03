@@ -3,8 +3,10 @@ package com.example.rentride;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.app.AlertDialog;
 import android.app.DatePickerDialog;
 import android.app.TimePickerDialog;
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Bundle;
 import android.text.format.DateFormat;
@@ -91,39 +93,42 @@ public class MyBooking extends AppCompatActivity {
         });
 
 
-
-
-
-
         butCancel = findViewById(R.id.Cancel);
 
         butCancel.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                CreateAlertDialogue();
 
-                DatabaseReference delRef = FirebaseDatabase.getInstance().getReference().child("Reservation");
-                delRef.addListenerForSingleValueEvent(new ValueEventListener() {
+            }
+
+            private void CreateAlertDialogue() {
+
+                AlertDialog.Builder builder = new AlertDialog.Builder(MyBooking.this);
+                builder.setMessage("Are you sure to cancel the booking?");
+                builder.setPositiveButton("Yes", new DialogInterface.OnClickListener() {
                     @Override
-                    public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
-                        if (dataSnapshot.hasChild("Res1")) {
-                            dbRef = FirebaseDatabase.getInstance().getReference().child("Reservation").child("Res1");
-                            dbRef.removeValue();
-                            clearControls();
-                            Toast.makeText(getApplicationContext(),"Details Deleted Successfully",Toast.LENGTH_SHORT).show();
+                    public void onClick(DialogInterface dialogInterface, int which) {
 
-                        }
-                        else
-                            Toast.makeText(getApplicationContext(),"No Details to Delete",Toast.LENGTH_SHORT).show();
-                    }
-
-                    @Override
-                    public void onCancelled(@NonNull DatabaseError databaseError) {
-
+                        dbRef = FirebaseDatabase.getInstance().getReference().child("Reservation").child("Res1");
+                        dbRef.removeValue();
+                        clearControls();
+                        Toast.makeText(getApplicationContext(),"Booking Details have been deleted",Toast.LENGTH_SHORT).show();
                     }
                 });
 
+                builder.setNegativeButton("No", new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialogInterface, int which) {
+                        Toast.makeText(getApplicationContext(),"Continue",Toast.LENGTH_SHORT).show();
+                    }
+                });
+                builder.create();
+                builder.show();
             }
         });
+
+
 
 
 
@@ -140,7 +145,7 @@ public class MyBooking extends AppCompatActivity {
                     @Override
                     public void onDateSet(DatePicker datePicker, int i, int i1, int i2) {
 
-                        txtpickdate.setText(i+"/"+i1+"/"+i2);
+                        txtpickdate.setText(i+"/"+(i1+1)+"/"+i2);
                     }
                 },mYear,mMonth,mDay);
                 datePickerDialog.show();
@@ -151,6 +156,7 @@ public class MyBooking extends AppCompatActivity {
         txtpicktime.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+
                 // initialize time picker dialog
                 TimePickerDialog timePickerDialog = new TimePickerDialog(
                         MyBooking.this,
@@ -193,7 +199,7 @@ public class MyBooking extends AppCompatActivity {
                     @Override
                     public void onDateSet(DatePicker datePicker, int i, int i1, int i2) {
 
-                        txtdropdate.setText(i+"/"+i1+"/"+i2);
+                        txtdropdate.setText(i+"/"+(i1+1)+"/"+i2);
                     }
                 },mYear,mMonth,mDay);
                 datePickerDialog.show();

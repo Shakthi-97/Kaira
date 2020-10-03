@@ -33,7 +33,7 @@
         <EditText
             android:id="@+id/Inputpick"
             android:layout_width="370dp"
-            android:layout_height="34dp"
+            android:layout_height="40dp"
             android:layout_marginTop="15dp"
             android:background="@drawable/input"
             android:ems="10"
@@ -76,20 +76,18 @@
             app:drawableEndCompat="@drawable/search"
             app:drawableStartCompat="@drawable/ic_action_pickup" />
 
-        <EditText
-            android:id="@+id/Inputpickdate"
+        <Button
             android:layout_width="180dp"
             android:layout_height="40dp"
-            android:background="@drawable/input"
-            android:datePickerMode="calendar"
-            android:drawableStart="@drawable/ic_action_date2"
-            android:ems="10"
+            android:id="@+id/txtpickdate"
             android:hint="@string/Pick_up_Date"
-            android:inputType="date"
             android:textSize="16sp"
-            android:textStyle="bold"
-            android:paddingLeft="15dp"
-            android:layout_marginTop="25dp"
+            android:background="@drawable/input"
+            android:drawableEnd="@drawable/drop"
+            android:padding="10dp"
+            android:drawableStart="@drawable/ic_action_date2"
+            android:drawableRight="@drawable/drop"
+            android:layout_marginTop="20dp"
             android:drawableLeft="@drawable/ic_action_date2" />
 
 
@@ -100,28 +98,28 @@
             android:layout_marginLeft="190dp"
             android:background="@drawable/input"
             android:drawableStart="@drawable/ic_action_time"
-
             android:ems="10"
             android:hint="@string/Time"
             android:inputType="time"
+            android:paddingLeft="15dp"
             android:layout_marginTop="-40dp"
             android:textSize="16sp"
             android:textStyle="bold"
             android:drawableLeft="@drawable/ic_action_time" />
 
-        <EditText
-            android:id="@+id/Inputdropdate"
+        <Button
             android:layout_width="180dp"
             android:layout_height="40dp"
-            android:layout_marginTop="25dp"
+            android:id="@+id/txtdropdate"
+            android:drawableEnd="@drawable/drop"
             android:background="@drawable/input"
-            android:drawableStart="@drawable/ic_action_date2"
-            android:ems="10"
+            android:layout_marginLeft="0sp"
+            android:layout_marginTop="20dp"
             android:paddingLeft="15dp"
-            android:hint="@string/Drop_off_Date"
-            android:inputType="date"
             android:textSize="16sp"
-            android:textStyle="bold"
+            android:drawableStart="@drawable/ic_action_date2"
+            android:drawableRight="@drawable/drop"
+            android:hint="@string/Drop_off_Date"
             android:drawableLeft="@drawable/ic_action_date2" />
 
         <EditText
@@ -134,13 +132,14 @@
             android:drawableStart="@drawable/ic_action_time"
             android:ems="10"
             android:hint="@string/Time1"
+            android:paddingLeft="15dp"
             android:inputType="time"
             android:textSize="16sp"
             android:textStyle="bold"
             android:drawableLeft="@drawable/ic_action_time" />
 
         <Button
-            android:id="@+id/btndays"
+            android:id="@+id/calculate"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="25dp"
