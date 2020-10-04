@@ -2,6 +2,7 @@ package com.example.rentride;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.text.TextUtils;
 import android.util.Patterns;
@@ -78,6 +79,8 @@ public class CreateDriver extends AppCompatActivity {
                             Toast.makeText(getApplicationContext(), "Failed", Toast.LENGTH_SHORT).show();
                         }
                         clearControls();
+
+                        Intent intent = new Intent(CreateDriver.this, SelectPayment.class);
                     }
                 }catch (NumberFormatException e){
                     e.printStackTrace();

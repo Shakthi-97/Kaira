@@ -2,6 +2,7 @@ package com.example.rentride;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.text.TextUtils;
 import android.view.View;
@@ -39,8 +40,6 @@ public class ExtraFacility extends AppCompatActivity {
         final_total = findViewById(R.id.tot_price);
 
         cal = new Calculate();
-
-
 
 
         submit_tot.setOnClickListener(new View.OnClickListener() {
@@ -83,6 +82,9 @@ public class ExtraFacility extends AppCompatActivity {
                 } catch (NumberFormatException e) {
                     e.printStackTrace();
                 }
+
+                Intent intent = new Intent(ExtraFacility.this, Receipt.class);
+                startActivity(intent);
 
 
             }

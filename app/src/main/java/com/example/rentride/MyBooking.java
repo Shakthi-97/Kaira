@@ -28,7 +28,7 @@ import java.util.Calendar;
 public class MyBooking extends AppCompatActivity {
 
     EditText txtpick,txtdrop,txtpickdate,txtpicktime,txtdropdate,txtdroptime;
-    Button butCancel,butUpdate;
+    Button butCancel,butUpdate,next;
     Reservation reserve1;
     DatabaseReference dbRef;
     int mYear,mMonth,mDay, mHour,mMinute;
@@ -44,6 +44,7 @@ public class MyBooking extends AppCompatActivity {
         txtpicktime = findViewById(R.id.Inputpicktime);
         txtdropdate = findViewById(R.id.Inputdropdate);
         txtdroptime = findViewById(R.id.Inputdroptime);
+        next = (Button) findViewById(R.id.next);
 
         dbRef = FirebaseDatabase.getInstance().getReference().child("Reservation").child("Res1");
 
@@ -236,6 +237,14 @@ public class MyBooking extends AppCompatActivity {
                 //show dialog
                 timePickerDialog.show();
 
+            }
+        });
+
+        next.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(MyBooking.this, EditExtraFacility.class);
+                startActivity(intent);
             }
         });
 

@@ -77,12 +77,13 @@ public class EditDriver extends AppCompatActivity {
             }
         });
 
-//        next.setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View view) {
-//                Intent intent = new Intent(EditDriver.this,)
-//            }
-//        });
+        next.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(EditDriver.this, retreive.class);
+                startActivity(intent);
+            }
+        });
 
 
     }

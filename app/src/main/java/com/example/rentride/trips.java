@@ -2,6 +2,7 @@ package com.example.rentride;
 
 import android.app.AlertDialog;
 import android.content.DialogInterface;
+import android.content.Intent;
 import android.os.Bundle;
 
 import androidx.annotation.NonNull;
@@ -143,6 +144,14 @@ public class trips extends Fragment {
                     }
                 });
 
+                holder.feedback.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View view) {
+                        Intent intent = new Intent(getActivity(), Front.class);
+                        startActivity(intent);
+                    }
+                });
+
 
             }
 
@@ -184,6 +193,7 @@ public class trips extends Fragment {
         View divider2;
         View divider3;
         LinearLayout cardView;
+        Button feedback;
 
         public ViewHolder(@NonNull View itemView) {
             super(itemView);
@@ -209,6 +219,7 @@ public class trips extends Fragment {
             divider2 = itemView.findViewById(R.id.divider2);
             divider3 = itemView.findViewById(R.id.divider3);
             cardView = itemView.findViewById(R.id.card_view);
+            feedback = itemView.findViewById(R.id.feedbacks);
         }
     }
 }

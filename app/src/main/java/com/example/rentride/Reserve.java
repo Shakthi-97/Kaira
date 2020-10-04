@@ -261,7 +261,7 @@ public class Reserve extends AppCompatActivity {
                         Toast.makeText(getApplicationContext(), "Data Svaed Successfully", Toast.LENGTH_SHORT).show();
                         clearControls();
 
-                        Intent intent = new Intent(Reserve.this, Login.class);
+                        Intent intent = new Intent(Reserve.this, Car.class);
                         startActivity(intent);
                     }
 
@@ -275,6 +275,8 @@ public class Reserve extends AppCompatActivity {
 
             }
         });
+
+
 
 
     }
