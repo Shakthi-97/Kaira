@@ -1,0 +1,215 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".Receipt">
+
+    <LinearLayout
+        android:id="@+id/linearLayout4"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#636360"
+        android:orientation="horizontal"
+        android:padding="5dp"
+        tools:ignore="MissingConstraints">
+
+        <TextView
+            android:id="@+id/textTittle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:fontFamily="sans-serif-thin"
+            android:paddingLeft="140dp"
+            android:text="@string/review"
+            android:textColor="#FFFFFF"
+            android:textSize="24dp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintHorizontal_bias="0.497"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.023" />
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="serif"
+        android:text="Car hire fee"
+        android:layout_marginLeft="20dp"
+        android:textSize="15sp"
+        android:layout_marginTop="50dp"/>
+
+    <TextView
+        android:id="@+id/carfee"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="serif"
+        android:text="14100.0"
+        android:textSize="15sp"
+        android:layout_marginLeft="250dp"
+        android:layout_marginTop="-20dp"/>
+
+    <TextView
+        android:id="@+id/rs1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="serif"
+        android:text="Rs"
+        android:textSize="15sp"
+        android:layout_marginLeft="220dp"
+        android:layout_marginTop="-20dp"/>
+
+    <TextView
+        android:id="@+id/textView4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:fontFamily="serif"
+        android:layout_marginLeft="20dp"
+        android:text="Extra Services"
+        android:textSize="15sp"/>
+
+    <TextView
+        android:id="@+id/extrafee"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="serif"
+        android:text="9000.0"
+        android:textSize="15sp"
+        android:layout_marginTop="-20dp"
+        android:layout_marginLeft="260dp"/>
+
+    <TextView
+        android:id="@+id/rs2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="serif"
+        android:text="Rs"
+        android:textSize="15sp"
+        android:layout_marginLeft="220dp"
+        android:layout_marginTop="-20dp"/>
+
+    <View
+        android:id="@+id/divider7"
+        android:layout_width="340dp"
+        android:layout_height="2dp"
+        android:background="#000000"
+        android:layout_marginRight="0dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="30dp" />
+
+
+    <TextView
+        android:id="@+id/textView12"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:layout_marginLeft="20dp"
+        android:fontFamily="serif"
+        android:text="Total"
+        android:textSize="16sp"
+        android:textStyle="bold"/>
+
+    <TextView
+        android:id="@+id/total"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="250dp"
+        android:layout_marginTop="-20dp"
+        android:fontFamily="serif"
+        android:text=""
+        android:textSize="15sp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/rs3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="serif"
+        android:text="Rs"
+        android:textSize="15sp"
+        android:layout_marginLeft="220dp"
+        android:layout_marginTop="-20dp"/>
+
+    <TextView
+        android:id="@+id/textView14"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:layout_marginLeft="20dp"
+        android:fontFamily="serif"
+        android:text="Pay at drop-off"
+        android:textSize="15sp"/>
+
+    <TextView
+        android:id="@+id/dropoff"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="260dp"
+        android:layout_marginTop="-20dp"
+        android:fontFamily="serif"
+        android:text=""
+        android:textSize="15sp" />
+
+    <TextView
+        android:id="@+id/rs4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="serif"
+        android:text="Rs"
+        android:textSize="15sp"
+        android:layout_marginLeft="220dp"
+        android:layout_marginTop="-20dp"/>
+
+    <TextView
+        android:id="@+id/textView16"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:layout_marginLeft="20dp"
+        android:fontFamily="serif"
+        android:text="Pay at pick-up"
+        android:textSize="16sp"
+        android:textStyle="bold"/>
+
+    <TextView
+        android:id="@+id/pickup"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="250dp"
+        android:layout_marginTop="-20dp"
+        android:fontFamily="serif"
+        android:text=""
+        android:textSize="15sp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/rs5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="serif"
+        android:text="Rs"
+        android:textSize="15sp"
+        android:layout_marginLeft="220dp"
+        android:layout_marginTop="-20dp"/>
+
+    <Button
+        android:id="@+id/book"
+        android:layout_width="320dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="100dp"
+        android:background="@drawable/recbook"
+        android:text="Book"
+        android:layout_marginLeft="20dp"
+        android:textAllCaps="true"
+        android:textStyle="bold"
+        android:textColor="#fff" />
+
+</LinearLayout>

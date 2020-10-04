@@ -16,10 +16,10 @@
     <string name="msg1">Please enter the lead driver details.</string>
     <string name="email">Email:</string>
     <string name="phoneNum">Phone Number:</string>
-    <string name="dob">Date of Birth:</string>
     <string name="country">Country/Region:</string>
     <string name="trips">Rides</string>
     <string name="complete">Trip Completed</string>
+    <string name="review">Review</string>
 
     <string name="book">"Book Now" </string>
     <string name="Where_to">Where to?</string>

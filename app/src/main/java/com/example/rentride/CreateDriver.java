@@ -4,11 +4,15 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
 import android.text.TextUtils;
+import android.util.Patterns;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
 
+import com.basgeekball.awesomevalidation.AwesomeValidation;
+import com.basgeekball.awesomevalidation.ValidationStyle;
+import com.basgeekball.awesomevalidation.utility.RegexTemplate;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 
@@ -18,6 +22,7 @@ public class CreateDriver extends AppCompatActivity {
     Button driverBook;
     DatabaseReference driverDbRef;
     Driver driver;
+    AwesomeValidation awesomeValidation;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -32,6 +37,11 @@ public class CreateDriver extends AppCompatActivity {
         country = findViewById(R.id.country);
 
         driverBook = findViewById(R.id.driverBook);
+
+        awesomeValidation = new AwesomeValidation(ValidationStyle.BASIC);
+
+        awesomeValidation.addValidation(this,R.id.email, Patterns.EMAIL_ADDRESS, R.string.invalid_email);
+        awesomeValidation.addValidation(this,R.id.phone, "[0-9]{1}[0-9]{9}", R.string.invalid_mobile);
 
         driver = new Driver();
 
@@ -61,9 +71,13 @@ public class CreateDriver extends AppCompatActivity {
                         driverDbRef.push().setValue(driver);
                         driverDbRef.child("Driver1").setValue(driver);
 
-                        Toast.makeText(getApplicationContext(), "Data saved Successfully", Toast.LENGTH_SHORT).show();
-                        clearControls();
+                        if(awesomeValidation.validate()){
+                            Toast.makeText(getApplicationContext(), "Data saved Successfully", Toast.LENGTH_SHORT).show();
 
+                        }else{
+                            Toast.makeText(getApplicationContext(), "Failed", Toast.LENGTH_SHORT).show();
+                        }
+                        clearControls();
                     }
                 }catch (NumberFormatException e){
                     e.printStackTrace();

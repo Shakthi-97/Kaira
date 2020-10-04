@@ -108,18 +108,6 @@ public class trips extends Fragment {
                 holder.dropoffDate.setText(model.getDropoffDate());
                 holder.amount.setText(model.getAmount().toString());
 
-//                holder.btnDelete.setOnClickListener(new View.OnClickListener() {
-//                    @Override
-//                    public void onClick(View view) {
-//                        FirebaseDatabase.getInstance().getReference().child("PastTrip").child(getRef(position).getKey()).removeValue().addOnCompleteListener(new OnCompleteListener<Void>() {
-//                            @Override
-//                            public void onComplete(@NonNull Task<Void> task) {
-//
-//                            }
-//                        });
-//                    }
-//                });
-
                 holder.btnDelete.setOnClickListener(new View.OnClickListener() {
                     @Override
                     public void onClick(View view) {
@@ -146,6 +134,7 @@ public class trips extends Fragment {
                             @Override
                             public void onClick(DialogInterface dialogInterface, int i) {
                                 dialogInterface.dismiss();
+                                Toast.makeText(getActivity(),"Continue!",Toast.LENGTH_SHORT).show();
                             }
                         });
                         AlertDialog alertDialog = dialog.create();
@@ -153,14 +142,7 @@ public class trips extends Fragment {
 
                     }
                 });
-//                holder.btnDelete.setOnClickListener(new View.OnClickListener() {
-//                    @Override
-//                    public void onClick(View view) {
-//                        DatabaseReference dbref = FirebaseDatabase.getInstance().getReference().child("PastTrip").child(getRef(position).getKey());
-//                        dbref.removeValue();
-//                        Toast.makeText(getContext(), "Successfully Deleted", Toast.LENGTH_LONG).show();
-//                    }
-//                });
+
 
             }
 

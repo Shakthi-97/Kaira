@@ -15,8 +15,9 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".Login"></activity>
-        <activity android:name=".CreateDriver"></activity>
+        <activity android:name=".Receipt"></activity>
+        <activity android:name=".Login" />
+        <activity android:name=".CreateDriver" />
         <activity android:name=".EditDriver" />
         <activity android:name=".Reserve" />
         <!--
@@ -36,9 +37,9 @@
             android:label="@string/title_activity_maps" />
         <activity android:name=".MyBooking" />
         <activity android:name=".Car" />
-        <activity android:name=".Register" />
+        <activity android:name=".MainActivity" />
         <activity
-            android:name=".MainActivity"
+            android:name=".Register"
             android:label="@string/app_name"
             android:theme="@style/AppTheme.NoActionBar">
             <intent-filter>
