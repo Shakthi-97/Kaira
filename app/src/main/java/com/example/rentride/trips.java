@@ -97,7 +97,7 @@ public class trips extends Fragment {
         FirebaseRecyclerOptions<PastTrips> options = new FirebaseRecyclerOptions.Builder<PastTrips>().setQuery(tripsReference, PastTrips.class).build();
         FirebaseRecyclerAdapter<PastTrips, ViewHolder> adapter = new FirebaseRecyclerAdapter<PastTrips, ViewHolder>(options) {
             @Override
-            protected void onBindViewHolder(@NonNull ViewHolder holder, int position, @NonNull PastTrips model) {
+            protected void onBindViewHolder(@NonNull ViewHolder holder, final int position, @NonNull PastTrips model) {
 
                 holder.driverName.setText(model.getDriverName());
                 holder.phone.setText(model.getPhone());
