@@ -15,7 +15,11 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".Receipt"></activity>
+        <activity android:name=".UserProfile"></activity>
+        <activity android:name=".EditUserProfile" />
+        <activity android:name=".EditExtraFacility" />
+        <activity android:name=".ExtraFacility" />
+        <activity android:name=".Receipt" />
         <activity android:name=".Login" />
         <activity android:name=".CreateDriver" />
         <activity android:name=".EditDriver" />

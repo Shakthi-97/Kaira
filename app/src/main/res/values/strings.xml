@@ -69,5 +69,23 @@
     <string name="OR">OR</string>
     <string name="Resister_Here">Register Here</string>
 
+    <string name="passnegers">4 Passenger(s)</string>
+    <string name="bags">2 Bag(s)</string>
+    <string name="wifi">Wifi</string>
+    <string name="seat">Child Toddler Seat</string>
+    <string name="lkr">Rs</string>
+    <string name="qty">Quantity</string>
+    <string name="gps">GPS</string>
+    <string name="name">Name*</string>
+    <string name="email1">Email*</string>
+    <string name="password">Password*</string>
+    <string name="contact">Contact No*</string>
+    <string name="Name">Atara Francis</string>
+    <string name="Email">atara91@gmail.com</string>
+    <string name="web">Web</string>
+    <string name="graphic">Graphic</string>
+    <string name="uiux">UI/UX</string>
+    <string name="note">This profile is hidden</string>
+
 
 </resources>
