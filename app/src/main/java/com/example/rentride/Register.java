@@ -2,6 +2,7 @@ package com.example.rentride;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.text.TextUtils;
 import android.util.Patterns;
@@ -79,6 +80,7 @@ public class Register extends AppCompatActivity {
                         //dbRef.push().setValue(reg);
                         dbRef.child("Reg1").setValue(reg);
                         if (awesomeValidation.validate()){
+
                             //On success
                             Toast.makeText(getApplicationContext(), "Registered Successfully", Toast.LENGTH_SHORT).show();
                         }else{

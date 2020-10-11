@@ -69,7 +69,7 @@ public class CreateDriver extends AppCompatActivity {
                         driver.setLicenseNum(licenseNum.getText().toString().trim());
                         driver.setCountry(country.getText().toString().trim());
 
-                        driverDbRef.push().setValue(driver);
+                        //driverDbRef.push().setValue(driver);
                         driverDbRef.child("Driver1").setValue(driver);
 
                         if(awesomeValidation.validate()){
@@ -81,6 +81,7 @@ public class CreateDriver extends AppCompatActivity {
                         clearControls();
 
                         Intent intent = new Intent(CreateDriver.this, SelectPayment.class);
+                        startActivity(intent);
                     }
                 }catch (NumberFormatException e){
                     e.printStackTrace();

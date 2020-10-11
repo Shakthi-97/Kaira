@@ -15,7 +15,7 @@ import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
 
-public class MainActivity4 extends AppCompatActivity {
+public class EditUserProfile extends AppCompatActivity {
 
     EditText txtName, txtEmail, txtContact_No;
     DatabaseReference dbRef;
@@ -26,7 +26,7 @@ public class MainActivity4 extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main5);
+        setContentView(R.layout.activity_edit_user_profile);
 
         txtName = findViewById(R.id.CustName);
         txtEmail = findViewById(R.id.CustEmail);

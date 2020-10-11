@@ -97,6 +97,7 @@ public class EditExtraFacility extends AppCompatActivity {
                 Toast.makeText(getApplicationContext(), "Details Updated Successfully", Toast.LENGTH_SHORT).show();
 
                 Intent intent = new Intent(EditExtraFacility.this, EditDriver.class);
+                startActivity(intent);
 
             }
         });

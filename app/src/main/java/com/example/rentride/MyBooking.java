@@ -86,9 +86,10 @@ public class MyBooking extends AppCompatActivity {
                 dbRef.child("Reservation").child("Res1").child("returndate").setValue(txtdropdate.getText().toString().trim());
                 dbRef.child("Reservation").child("Res1").child("returntime").setValue(txtdroptime.getText().toString().trim());
 
-
                 Toast.makeText(getApplicationContext(),"Details Updated Succesfully",Toast.LENGTH_SHORT).show();
 
+                Intent intent = new Intent(MyBooking.this, EditExtraFacility.class);
+                startActivity(intent);
 
             }
         });
@@ -240,13 +241,6 @@ public class MyBooking extends AppCompatActivity {
             }
         });
 
-        next.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Intent intent = new Intent(MyBooking.this, EditExtraFacility.class);
-                startActivity(intent);
-            }
-        });
 
     }
 

@@ -1,34 +1,34 @@
 {
   "project_info": {
-    "project_number": "366761577833",
-    "firebase_url": "https://kaira-88356.firebaseio.com",
-    "project_id": "kaira-88356",
-    "storage_bucket": "kaira-88356.appspot.com"
+    "project_number": "269777654269",
+    "firebase_url": "https://kaira-e0fb3.firebaseio.com",
+    "project_id": "kaira-e0fb3",
+    "storage_bucket": "kaira-e0fb3.appspot.com"
   },
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:366761577833:android:02441510e18b8183d8c1f8",
+        "mobilesdk_app_id": "1:269777654269:android:538102d962bfb6f8140994",
         "android_client_info": {
           "package_name": "com.example.rentride"
         }
       },
       "oauth_client": [
         {
-          "client_id": "366761577833-o949ivjgnpsq8kc1ar39plqjgf5h3a7r.apps.googleusercontent.com",
+          "client_id": "269777654269-39cqjrl2vplhbc1opjovjcbkk7cuscg5.apps.googleusercontent.com",
           "client_type": 3
         }
       ],
       "api_key": [
         {
-          "current_key": "AIzaSyDPEBiROQL0NC9S-DO4k3VKQeX0IMBD6us"
+          "current_key": "AIzaSyCPiCpaoaBgzChVimkIw8qphAYb6QXsweM"
         }
       ],
       "services": {
         "appinvite_service": {
           "other_platform_oauth_client": [
             {
-              "client_id": "366761577833-o949ivjgnpsq8kc1ar39plqjgf5h3a7r.apps.googleusercontent.com",
+              "client_id": "269777654269-39cqjrl2vplhbc1opjovjcbkk7cuscg5.apps.googleusercontent.com",
               "client_type": 3
             }
           ]

@@ -1,6 +1,7 @@
 package com.example.rentride;
 
 import android.app.AlertDialog;
+import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Bundle;
@@ -35,6 +36,7 @@ public class trips extends Fragment {
     private static View tripsView;
     private RecyclerView tripsList;
     private DatabaseReference tripsReference;
+    private Context context;
 
     // TODO: Rename parameter arguments, choose names that match
     // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
@@ -87,6 +89,8 @@ public class trips extends Fragment {
         tripsList.setLayoutManager(new LinearLayoutManager(getContext()));
         tripsList.setNestedScrollingEnabled(true);
         tripsReference = FirebaseDatabase.getInstance().getReference().child("PastTrip");
+
+
         return tripsView;
     }
 
@@ -143,7 +147,6 @@ public class trips extends Fragment {
 
                     }
                 });
-
                 holder.feedback.setOnClickListener(new View.OnClickListener() {
                     @Override
                     public void onClick(View view) {
@@ -151,6 +154,7 @@ public class trips extends Fragment {
                         startActivity(intent);
                     }
                 });
+
 
 
             }
@@ -219,7 +223,7 @@ public class trips extends Fragment {
             divider2 = itemView.findViewById(R.id.divider2);
             divider3 = itemView.findViewById(R.id.divider3);
             cardView = itemView.findViewById(R.id.card_view);
-            feedback = itemView.findViewById(R.id.feedbacks);
+            feedback = itemView.findViewById(R.id.btnFeedback);
         }
     }
 }
