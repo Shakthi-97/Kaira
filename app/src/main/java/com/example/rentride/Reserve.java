@@ -39,6 +39,8 @@ public class Reserve extends AppCompatActivity {
     TextView result;
     DatePickerDialog.OnDateSetListener dateSetListener1,dateSetListener2;
 
+    public static final String EXTRA_NUMBER2 = "com.example.rentride.EXTRA_NUMBER1";
+
 
 
     @Override
@@ -141,7 +143,8 @@ public class Reserve extends AppCompatActivity {
                         int months = period.getMonths();
                         int days = period.getDays();
 
-                        result.setText(days + " Day");
+                        result.setText(Integer.toString(days));
+
                     } else {
                         Toast.makeText(getApplicationContext(),"Not a valid date",Toast.LENGTH_SHORT).show();
 
@@ -151,6 +154,10 @@ public class Reserve extends AppCompatActivity {
                 } catch (ParseException e) {
                     e.printStackTrace();
                 }
+
+
+
+
 
             }
         });
@@ -260,6 +267,9 @@ public class Reserve extends AppCompatActivity {
                         dbRef.child("Res1").setValue(reserve1);
                         Toast.makeText(getApplicationContext(), "Data Svaed Successfully", Toast.LENGTH_SHORT).show();
                         clearControls();
+
+
+
 
                         Intent intent = new Intent(Reserve.this, Car.class);
                         startActivity(intent);

@@ -10,7 +10,7 @@ import android.widget.TextView;
 
 public class Receipt extends AppCompatActivity {
 
-    TextView carfee,extrafee,totalcash,pickup,dropoff;
+    TextView carfee,extrafee,totalcash,pickup,dropoff,daysRs;
     Button book;
 
     @Override
@@ -25,17 +25,28 @@ public class Receipt extends AppCompatActivity {
         dropoff = (TextView) findViewById(R.id.dropoff);
         book = (Button) findViewById(R.id.book);
 
-        Float no1 = Float.parseFloat(carfee.getText().toString());
-        Float no2 = Float.parseFloat(extrafee.getText().toString());
+        Intent intent = getIntent();
+        Double carFees = intent.getDoubleExtra(ExtraFacility.EXTRA_NUMBER1, 0 );
+        Double extraFees = intent.getDoubleExtra(ExtraFacility.EXTRA_NUMBER2, 0 );
+        carfee.setText(""+carFees);
+        extrafee.setText(""+extraFees);
 
-        Float total = no1 + no2;
-        totalcash.setText(Float.toString(total));
 
-        Float pickupPay = total * 60/100;
-        pickup.setText(Float.toString(pickupPay));
 
-        Float dropoffPay = total - pickupPay;
-        dropoff.setText(Float.toString(dropoffPay));
+        Double no1 = Double.parseDouble(carfee.getText().toString());
+        Double no2 = Double.parseDouble(extrafee.getText().toString());
+
+        Double total = no1 + no2;
+        totalcash.setText(Double.toString(total));
+
+        Double pickupPay = total * 60/100;
+        pickup.setText(Double.toString(pickupPay));
+
+        Double dropoffPay = total - pickupPay;
+        dropoff.setText(Double.toString(dropoffPay));
+
+
+
 
         book.setOnClickListener(new View.OnClickListener() {
             @Override

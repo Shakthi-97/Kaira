@@ -20,9 +20,12 @@ public class ExtraFacility extends AppCompatActivity {
     DatabaseReference dbRef;
     Calculate cal;
 
-    Button submit_tot, edit_btn;
+    Button submit_tot;
     EditText quantity,qty;
-    TextView amount, amt, total_price,total_added,final_total;
+    TextView amount, amt, total_price,total_added,final_total,carfee;
+
+    public static final String EXTRA_NUMBER1 = "com.example.rentride.EXTRA_NUMBER1";
+    public static final String EXTRA_NUMBER2 = "com.example.rentride.EXTRA_NUMBER2";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -38,6 +41,7 @@ public class ExtraFacility extends AppCompatActivity {
         total_price = findViewById(R.id.seat_price);
         total_added = findViewById(R.id.gps_price);
         final_total = findViewById(R.id.tot_price);
+        carfee = findViewById(R.id.car_fee);
 
         cal = new Calculate();
 
@@ -47,20 +51,17 @@ public class ExtraFacility extends AppCompatActivity {
             public void onClick(View view) {
 
                 Integer No1 = Integer.parseInt(quantity.getText().toString());
-                Integer No2 = Integer.parseInt(amount.getText().toString());
 
-                Integer tot = No1 * 2000;
-                total_price.setText(Integer.toString(tot));
+                Double tot = No1 * 2000.0;
+                total_price.setText(Double.toString(tot));
 
                 Integer Num1 = Integer.parseInt(qty.getText().toString());
-                Integer Num2 = Integer.parseInt(amt.getText().toString());
 
+                Double totl = Num1 * 800.0;
+                total_added.setText(Double.toString(totl));
 
-                Integer totl = Num1 * 800;
-                total_added.setText(Integer.toString(totl));
-
-                Integer  finaltot = tot + totl;
-                final_total.setText(Integer.toString(finaltot));
+                Double  finaltot = tot + totl;
+                final_total.setText(Double.toString(finaltot));
 
 
                 dbRef = FirebaseDatabase.getInstance().getReference().child("ExtraFacility");
@@ -78,24 +79,21 @@ public class ExtraFacility extends AppCompatActivity {
                         Toast.makeText(getApplicationContext(),"Submitted successfully",Toast.LENGTH_SHORT).show();
                         clearControls();
 
+                        Double car_fee = Double.parseDouble(carfee.getText().toString());
+                        Double extra_fee = Double.parseDouble(final_total.getText().toString());
 
+                        Intent intent = new Intent(ExtraFacility.this, Receipt.class);
+                        intent.putExtra(EXTRA_NUMBER1, car_fee);
+                        intent.putExtra(EXTRA_NUMBER2, extra_fee);
+                        startActivity(intent);
                     }
 
                 } catch (NumberFormatException e) {
                     e.printStackTrace();
                 }
-
-                Intent intent = new Intent(ExtraFacility.this, Receipt.class);
-                startActivity(intent);
-
-
             }
-
-
         });
     }
-
-
     private void clearControls(){
         quantity.setText("");
         qty.setText("");

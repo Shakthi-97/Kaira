@@ -50,11 +50,11 @@
         android:id="@+id/carfee"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginLeft="260dp"
+        android:layout_marginTop="-20dp"
         android:fontFamily="serif"
         android:text="14100.0"
-        android:textSize="15sp"
-        android:layout_marginLeft="250dp"
-        android:layout_marginTop="-20dp"/>
+        android:textSize="15sp" />
 
     <TextView
         android:id="@+id/rs1"
@@ -121,7 +121,7 @@
         android:id="@+id/total"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginLeft="250dp"
+        android:layout_marginLeft="260dp"
         android:layout_marginTop="-20dp"
         android:fontFamily="serif"
         android:text=""
@@ -183,7 +183,7 @@
         android:id="@+id/pickup"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginLeft="250dp"
+        android:layout_marginLeft="260dp"
         android:layout_marginTop="-20dp"
         android:fontFamily="serif"
         android:text=""

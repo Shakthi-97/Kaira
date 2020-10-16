@@ -91,13 +91,27 @@
         android:textColor="#000"
         android:textStyle="bold" />
 
+    <Button
+        android:id="@+id/extra_next"
+        android:layout_width="150dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="550dp"
+        android:layout_marginLeft="210dp"
+        android:background="@drawable/but"
+        android:paddingRight="8dp"
+        android:text="next"
+        android:textColor="#fff"
+        android:textSize="18sp"
+        android:textStyle="bold|italic"
+        />
+
 
     <Button
         android:id="@+id/submit_tot1"
         android:layout_width="150dp"
         android:layout_height="40dp"
         android:layout_marginTop="550dp"
-        android:layout_marginLeft="210dp"
+        android:layout_marginLeft="50dp"
         android:background="@drawable/but"
         android:paddingRight="8dp"
         android:text="Save"
@@ -217,30 +231,26 @@
         android:text="0"
         android:textColor="#000" />
 
-    <Button
-        android:id="@+id/delt_but"
-        android:layout_width="50dp"
+    <ImageView
+        android:id="@+id/delete_seat"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:background="@drawable/but"
-        android:drawableEnd="@drawable/delete"
-        android:layout_marginLeft="350dp"
+        android:background="@drawable/ic_delete"
+        android:layout_marginLeft="320dp"
         android:layout_marginTop="78dp"
         android:padding="5dp"
-        android:drawableRight="@drawable/delete"
         />
 
 
 
-    <Button
-        android:id="@+id/delet_btn"
-        android:layout_width="50dp"
+    <ImageView
+        android:id="@+id/delete_gps"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:background="@drawable/but"
-        android:drawableEnd="@drawable/delete"
-        android:layout_marginLeft="350dp"
+        android:background="@drawable/ic_delete"
+        android:layout_marginLeft="320dp"
         android:layout_marginTop="300dp"
         android:padding="5dp"
-        android:drawableRight="@drawable/delete"
         />
 
     <View

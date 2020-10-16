@@ -15,23 +15,37 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".retreive"></activity>
-        <activity android:name=".crudcomplaint" />
-        <activity android:name=".checkrating" />
+        <activity android:name=".retreive"
+            android:parentActivityName=".EditDriver"/>
+        <activity android:name=".crudcomplaint"
+            android:parentActivityName=".Front"/>
+        <activity android:name=".checkrating"
+            android:parentActivityName=".Front"/>
         <activity android:name=".Front" />
-        <activity android:name=".Details" />
-        <activity android:name=".Cash" />
-        <activity android:name=".Card" />
-        <activity android:name=".SelectPayment" />
+        <activity android:name=".Details"
+            android:parentActivityName=".Card"/>
+        <activity android:name=".Cash"
+            android:parentActivityName=".SelectPayment"/>
+        <activity android:name=".Card"
+            android:parentActivityName=".SelectPayment"/>
+        <activity android:name=".SelectPayment"
+            android:parentActivityName=".CreateDriver"/>
         <activity android:name=".UserProfile" />
-        <activity android:name=".EditUserProfile" />
+        <activity android:name=".EditUserProfile"
+            android:parentActivityName=".UserProfile"/>
         <activity android:name=".MainActivity" />
-        <activity android:name=".ExtraFacility" />
-        <activity android:name=".Receipt" />
-        <activity android:name=".Login" />
-        <activity android:name=".CreateDriver" />
-        <activity android:name=".EditDriver" />
-        <activity android:name=".Reserve" />
+        <activity android:name=".ExtraFacility"
+            android:parentActivityName=".Car"/>
+        <activity android:name=".Receipt"
+            android:parentActivityName=".ExtraFacility"/>
+        <activity android:name=".EditExtraFacility"
+            android:parentActivityName=".MyBooking"/>
+        <activity android:name=".CreateDriver"
+            android:parentActivityName=".Receipt"/>
+        <activity android:name=".EditDriver"
+            android:parentActivityName=".EditExtraFacility"/>
+        <activity android:name=".Reserve"
+            android:parentActivityName=".MainActivity"/>
         <!--
              The API key for Google Maps-based APIs is defined as a string resource.
              (See the file "res/values/google_maps_api.xml").
@@ -48,10 +62,11 @@
             android:name=".MapsActivity"
             android:label="@string/title_activity_maps" />
         <activity android:name=".MyBooking" />
-        <activity android:name=".Car" />
+        <activity android:name=".Car"
+            android:parentActivityName=".Reserve"/>
         <activity android:name=".Register" />
         <activity
-            android:name=".EditExtraFacility"
+            android:name=".Login"
             android:label="@string/app_name"
             android:theme="@style/AppTheme.NoActionBar">
             <intent-filter>
