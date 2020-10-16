@@ -1,9 +1,9 @@
 package com.example.rentride;
 
 import androidx.annotation.NonNull;
-import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.app.AlertDialog;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Bundle;
@@ -11,6 +11,7 @@ import android.text.TextUtils;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -26,7 +27,7 @@ public class EditExtraFacility extends AppCompatActivity {
     DatabaseReference dbRef;
     Calculate cal;
 
-    Button submit_tot,calUpdate,calDelete;
+    Button submit_tot,calUpdate,delet_btn,delete_but;
     EditText quantity,qty;
     TextView amount, amt, total_price,total_added,final_total;
 
@@ -44,6 +45,7 @@ public class EditExtraFacility extends AppCompatActivity {
         total_price = findViewById(R.id.seat_price);
         total_added = findViewById(R.id.gps_price);
         final_total = findViewById(R.id.tot_price);
+
 
 
         dbRef = FirebaseDatabase.getInstance().getReference().child("ExtraFacility").child("Calculate1");
@@ -101,10 +103,6 @@ public class EditExtraFacility extends AppCompatActivity {
 
             }
         });
-
-
-
-
 
 
     }

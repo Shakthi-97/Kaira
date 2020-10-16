@@ -86,6 +86,9 @@
     <string name="graphic">Graphic</string>
     <string name="uiux">UI/UX</string>
     <string name="note">This profile is hidden</string>
+    <string name="register">Register Now</string>
+    <string name="edit">EDIT</string>
+
 
     <string name="txt_name">Name</string>
     <string name="txt_mobile">07XXXXXXXX</string>
@@ -116,6 +119,7 @@
     <string name="card">CARD</string>
     <string name="cash">CASH</string>
     <string name="title_activity_rating">Rating</string>
+
 
 
 </resources>

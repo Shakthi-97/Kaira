@@ -1,5 +1,6 @@
 package com.example.rentride;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
@@ -14,15 +15,21 @@ import android.widget.Toast;
 import com.basgeekball.awesomevalidation.AwesomeValidation;
 import com.basgeekball.awesomevalidation.ValidationStyle;
 import com.basgeekball.awesomevalidation.utility.RegexTemplate;
+import com.google.android.gms.tasks.OnCompleteListener;
+import com.google.android.gms.tasks.Task;
+import com.google.firebase.auth.AuthResult;
+import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 
 public class Register extends AppCompatActivity {
     //Initialize variable
     EditText txtName,txtEmail,txtContact_No,txtPassword;
-    Button btn;
+    Button reg_button;
     DatabaseReference dbRef;
     Registration reg;
+
+
 
     AwesomeValidation awesomeValidation;
 
@@ -35,7 +42,7 @@ public class Register extends AppCompatActivity {
         txtEmail = findViewById(R.id.Cus_email);
         txtContact_No = findViewById(R.id.Cus_Contact_No);
         txtPassword = findViewById(R.id.Cus_Password);
-        btn = findViewById(R.id.reg_button);
+        reg_button = findViewById(R.id.reg_button);
 
         //Initialize validation style
         awesomeValidation=new AwesomeValidation(ValidationStyle.BASIC);
@@ -56,7 +63,7 @@ public class Register extends AppCompatActivity {
 
         reg = new Registration();
 
-        btn.setOnClickListener(new View.OnClickListener() {
+        reg_button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 dbRef = FirebaseDatabase.getInstance().getReference().child("Register");
@@ -79,6 +86,7 @@ public class Register extends AppCompatActivity {
 
                         //dbRef.push().setValue(reg);
                         dbRef.child("Reg1").setValue(reg);
+
                         if (awesomeValidation.validate()){
 
                             //On success
@@ -88,6 +96,10 @@ public class Register extends AppCompatActivity {
                         }
 
                         clearControls();
+
+                        Intent intent = new Intent(Register.this, Login.class);
+                        startActivity(intent);
+
                     }
 
                 } catch (NumberFormatException e) {
@@ -97,6 +109,7 @@ public class Register extends AppCompatActivity {
 
 
         });
+
     }
     private void clearControls(){
         txtName.setText("");
@@ -106,5 +119,4 @@ public class Register extends AppCompatActivity {
 
     }
 }
-
 

@@ -3,6 +3,9 @@ package com.example.rentride;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.app.AlertDialog;
+import android.content.DialogInterface;
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -19,7 +22,7 @@ public class EditUserProfile extends AppCompatActivity {
 
     EditText txtName, txtEmail, txtContact_No;
     DatabaseReference dbRef;
-    Button but, regUpdate;
+    Button but, save_btn,butEdit;
     Register Reg1;
 
 
@@ -53,9 +56,9 @@ public class EditUserProfile extends AppCompatActivity {
             }
         });
 
-        regUpdate = findViewById(R.id.save_btn);
+        save_btn = findViewById(R.id.save_btn);
 
-        regUpdate.setOnClickListener(new View.OnClickListener() {
+        save_btn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
 
@@ -67,8 +70,48 @@ public class EditUserProfile extends AppCompatActivity {
 
                 Toast.makeText(getApplicationContext(), "Details Updated Successfully",Toast.LENGTH_SHORT).show();
 
+                Intent intent = new Intent(EditUserProfile.this, MainActivity.class);
+                startActivity(intent);
+
             }
         });
+
+        butEdit = findViewById(R.id.save_btn);
+
+        butEdit.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                CreateAlertDialogue();
+
+            }
+
+            private void CreateAlertDialogue() {
+
+                AlertDialog.Builder builder = new AlertDialog.Builder(EditUserProfile.this);
+                builder.setMessage("Do you want to make changes?");
+                builder.setPositiveButton("Yes", new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialogInterface, int which) {
+
+                        dbRef = FirebaseDatabase.getInstance().getReference().child("Register").child("Reg1");
+                        dbRef.removeValue();
+                        Toast.makeText(getApplicationContext(),"Details updated successfully",Toast.LENGTH_SHORT).show();
+                    }
+                });
+
+                builder.setNegativeButton("No", new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialogInterface, int which) {
+                        Toast.makeText(getApplicationContext(),"Continue",Toast.LENGTH_SHORT).show();
+                    }
+                });
+                builder.create();
+                builder.show();
+            }
+        });
+
+
+
     }
 }
 

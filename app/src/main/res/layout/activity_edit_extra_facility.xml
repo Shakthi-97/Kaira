@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@drawable/grey"
     tools:context=".EditExtraFacility">
 
     <ImageView
@@ -94,15 +95,16 @@
     <Button
         android:id="@+id/submit_tot1"
         android:layout_width="150dp"
-        android:layout_height="wrap_content"
+        android:layout_height="40dp"
         android:layout_marginTop="550dp"
         android:layout_marginLeft="210dp"
         android:background="@drawable/but"
         android:paddingRight="8dp"
         android:text="Save"
         android:textColor="#fff"
-        android:textSize="20sp"
-        android:textStyle="bold" />
+        android:textSize="18sp"
+        android:textStyle="bold|italic"
+        />
 
 
 
@@ -214,6 +216,32 @@
         android:paddingTop="5dp"
         android:text="0"
         android:textColor="#000" />
+
+    <Button
+        android:id="@+id/delt_but"
+        android:layout_width="50dp"
+        android:layout_height="wrap_content"
+        android:background="@drawable/but"
+        android:drawableEnd="@drawable/delete"
+        android:layout_marginLeft="350dp"
+        android:layout_marginTop="78dp"
+        android:padding="5dp"
+        android:drawableRight="@drawable/delete"
+        />
+
+
+
+    <Button
+        android:id="@+id/delet_btn"
+        android:layout_width="50dp"
+        android:layout_height="wrap_content"
+        android:background="@drawable/but"
+        android:drawableEnd="@drawable/delete"
+        android:layout_marginLeft="350dp"
+        android:layout_marginTop="300dp"
+        android:padding="5dp"
+        android:drawableRight="@drawable/delete"
+        />
 
     <View
         android:id="@+id/divider"

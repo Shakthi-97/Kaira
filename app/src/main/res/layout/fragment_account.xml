@@ -6,16 +6,13 @@
     tools:context=".account">
 
     <!-- TODO: Update blank fragment layout -->
+
     <de.hdodenhof.circleimageview.CircleImageView
         android:id="@+id/imageView"
-        android:layout_width="160dp"
-        android:layout_height="160dp"
-        android:layout_alignParentEnd="true"
-        android:layout_alignParentRight="true"
-        android:layout_alignParentBottom="true"
-        android:layout_marginEnd="94dp"
-        android:layout_marginRight="94dp"
-        android:layout_marginBottom="379dp"
+        android:layout_width="140dp"
+        android:layout_height="140dp"
+        android:layout_marginLeft="110dp"
+        android:layout_marginTop="50dp"
         android:src="@drawable/gomz" />
 
     <TextView
@@ -23,9 +20,9 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="@string/Name"
-        android:textSize="22sp"
+        android:textSize="20sp"
         android:textStyle="bold|italic"
-        android:layout_marginTop="240dp"
+        android:layout_marginTop="190dp"
         android:gravity="center"
         />
 
@@ -36,7 +33,7 @@
         android:layout_below="@+id/name_dis"
         android:text="@string/web"
         android:textSize="18sp"
-        android:layout_marginTop="10dp"
+        android:layout_marginTop="220dp"
         android:layout_marginLeft="80dp"
         />
 
@@ -47,7 +44,7 @@
         android:text="|"
         android:textSize="17sp"
         android:layout_below="@+id/name_dis"
-        android:layout_marginTop="10dp"
+        android:layout_marginTop="220dp"
         android:layout_marginLeft="130dp"
         />
 
@@ -59,7 +56,7 @@
         android:text="@string/graphic"
         android:textSize="20sp"
         android:layout_below="@+id/name_dis"
-        android:layout_marginTop="10dp"
+        android:layout_marginTop="220dp"
         android:layout_marginLeft="150dp"
         />
 
@@ -70,7 +67,7 @@
         android:text="|"
         android:textSize="17sp"
         android:layout_below="@+id/name_dis"
-        android:layout_marginTop="10dp"
+        android:layout_marginTop="220dp"
         android:layout_marginLeft="230dp"
         />
 
@@ -81,7 +78,7 @@
         android:text="@string/uiux"
         android:layout_below="@+id/name_dis"
         android:textSize="20sp"
-        android:layout_marginTop="10dp"
+        android:layout_marginTop="220dp"
         android:layout_marginLeft="250dp"
         />
 
@@ -91,7 +88,7 @@
         android:layout_height="30dp"
         android:src="@drawable/fb"
         android:layout_below="@+id/jobs"
-        android:layout_marginTop="10dp"
+        android:layout_marginTop="250dp"
         android:layout_marginLeft="85dp"
 
         />
@@ -102,7 +99,7 @@
         android:layout_height="37dp"
         android:src="@drawable/insta"
         android:layout_below="@+id/jobs"
-        android:layout_marginTop="9dp"
+        android:layout_marginTop="250dp"
         android:layout_marginLeft="165dp"
         />
 
@@ -112,39 +109,36 @@
         android:layout_height="32dp"
         android:layout_below="@+id/jobs"
         android:layout_marginLeft="260dp"
-        android:layout_marginTop="9dp"
+        android:layout_marginTop="250dp"
         android:src="@drawable/tweet" />
 
     <Button
-        android:id="@+id/view_details"
-        android:layout_width="180dp"
-        android:layout_height="30dp"
-        android:background="@drawable/etc"
+        android:id="@+id/btn_detail"
+        android:layout_width="188dp"
+        android:layout_height="32dp"
         android:layout_below="@+id/insta"
-        android:layout_marginTop="50dp"
-        android:hint="View Details"
         android:layout_marginLeft="100dp"
-        />
+        android:layout_marginTop="350dp"
+        android:background="@drawable/etc"
+        android:hint="View Details" />
 
     <ImageView
         android:id="@+id/lock"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:src="@drawable/ic_baseline_lock_24"
         android:layout_below="@+id/view_details"
-        android:layout_marginTop="90dp"
-        />
+        android:layout_marginTop="450dp"
+        android:src="@drawable/ic_baseline_lock_24" />
 
     <TextView
         android:id="@+id/note"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_below="@+id/lock"
+        android:layout_marginTop="480dp"
+        android:gravity="center"
         android:text="@string/note"
         android:textSize="20sp"
-        android:gravity="center"
-        android:layout_below="@+id/lock"
-        android:textStyle="bold|italic"
-        android:layout_marginTop="10dp"
-        />
+        android:textStyle="bold|italic" />
 
 </FrameLayout>

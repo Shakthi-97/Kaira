@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "423856903579",
+    "firebase_url": "https://rent-ride-3ea11.firebaseio.com",
+    "project_id": "rent-ride-3ea11",
+    "storage_bucket": "rent-ride-3ea11.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:423856903579:android:d48b85ad729e5b139ebd3e",
+        "android_client_info": {
+          "package_name": "com.example.rentride"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "423856903579-4dajmqc8gs7i56l7krofskjmhc799m0s.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.rentride",
+            "certificate_hash": "16d8344c8b22031f7322e4209ebcf26a3b4dc389"
+          }
+        },
+        {
+          "client_id": "423856903579-lqdggg565shtt0eahc9r5gf98hlpkirl.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAKlIBzJLcT4EcmVf0HwjQAy8z3bma_9dA"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "423856903579-lqdggg565shtt0eahc9r5gf98hlpkirl.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

@@ -20,7 +20,7 @@ public class ExtraFacility extends AppCompatActivity {
     DatabaseReference dbRef;
     Calculate cal;
 
-    Button submit_tot;
+    Button submit_tot, edit_btn;
     EditText quantity,qty;
     TextView amount, amt, total_price,total_added,final_total;
 
@@ -77,6 +77,8 @@ public class ExtraFacility extends AppCompatActivity {
                         dbRef.child("Calculate1").setValue(cal);
                         Toast.makeText(getApplicationContext(),"Submitted successfully",Toast.LENGTH_SHORT).show();
                         clearControls();
+
+
                     }
 
                 } catch (NumberFormatException e) {
@@ -92,6 +94,8 @@ public class ExtraFacility extends AppCompatActivity {
 
         });
     }
+
+
     private void clearControls(){
         quantity.setText("");
         qty.setText("");

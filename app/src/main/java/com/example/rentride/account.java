@@ -1,5 +1,6 @@
 package com.example.rentride;
 
+import android.content.Intent;
 import android.os.Bundle;
 
 import androidx.fragment.app.Fragment;
@@ -15,6 +16,8 @@ import android.widget.Button;
  * create an instance of this fragment.
  */
 public class account extends Fragment {
+
+    Button btn;
 
     // TODO: Rename parameter arguments, choose names that match
     // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
@@ -61,6 +64,20 @@ public class account extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_account, container, false);
-    }
+        View view = inflater.inflate(R.layout.fragment_account, container, false);
+
+
+            btn = view.findViewById(R.id.btn_detail);
+            btn.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View view) {
+                    Intent intent = new Intent(getActivity(),EditUserProfile.class);
+                    startActivity(intent);
+                }
+            });
+
+        return view;
+
+
+        }
 }
